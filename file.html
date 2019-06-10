@@ -1,0 +1,106 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="file.css" />
+    <script src="file.js"></script>
+    <title>Ludo - SF Assignment 3</title>
+</head>
+<body>
+    <div class="head-wrapper">
+        <span class="title">
+            Ludo
+        </span>
+    </div>
+    <div class="wrapper">
+        <div class="top">
+            <div id="1" onclick="MoveToken('1')" class="cell"></div>
+            <div id="2" onclick="MoveToken('2')" class="cell"></div>
+            <div id="3" onclick="MoveToken('3')" class="cell"></div>
+            <div id="4" onclick="MoveToken('4')" class="cell"></div>
+            <div id="5" onclick="MoveToken('5')" class="cell"></div>
+            <div id="6" onclick="MoveToken('6')" class="cell"></div>
+            <div id="7" onclick="MoveToken('7')" class="cell"></div>
+            <div id="8" onclick="MoveToken('8')" class="cell"></div>
+        </div>
+
+        <div class="left">
+            <div id="28" onclick="MoveToken('28')" class="cell"></div>
+            <div id="27" onclick="MoveToken('27')" class="cell"></div>
+            <div id="26" onclick="MoveToken('26')" class="cell"></div>
+            <div id="25" onclick="MoveToken('25')" class="cell"></div>
+            <div id="24" onclick="MoveToken('24')" class="cell"></div>
+            <div id="23" onclick="MoveToken('23')" class="cell"></div>
+        </div>
+        <div class="right">
+            <div id="9" onclick="MoveToken('9')" class="cell"></div>
+            <div id="10" onclick="MoveToken('10')" class="cell"></div>
+            <div id="11" onclick="MoveToken('11')" class="cell"></div>
+            <div id="12" onclick="MoveToken('12')" class="cell"></div>
+            <div id="13" onclick="MoveToken('13')" class="cell"></div>
+            <div id="14" onclick="MoveToken('14')" class="cell"></div>
+        </div>
+        <div class="bottom">
+            <div id="22" onclick="MoveToken('22')" class="cell"></div>
+            <div id="21" onclick="MoveToken('21')" class="cell"></div>
+            <div id="20" onclick="MoveToken('20')" class="cell"></div>
+            <div id="19" onclick="MoveToken('19')" class="cell"></div>
+            <div id="18" onclick="MoveToken('18')" class="cell"></div>
+            <div id="17" onclick="MoveToken('17')" class="cell"></div>
+            <div id="16" onclick="MoveToken('16')" class="cell"></div>
+            <div id="15" onclick="MoveToken('15')" class="cell"></div>
+        </div>
+
+        <div class="die-controller">
+            <span class="roll" id="rollInst">Welcome</span>
+            <span id="diceVal" class="die-res"></span>
+            <div class="custom-input">
+                <input id="diceCustom" type="text" value=""/>
+            </div>
+            <span id="playerTurn" class="player-turn"> Player A ROLL! </span>
+            <button id="rollBtn" onclick="RollDice()">roll!</button>
+        </div>
+
+        <div class="lockerA" onclick="MoveToken('0')">
+            Locker for A
+            <span id="0"></span>
+        </div>
+        <div class="winA" onclick="">
+            A's winners
+            <span id="-1"></span>
+        </div>
+        <div class="winB" onclick="">
+            B's winners
+            <span id="-2"></span>
+        </div>
+        <div class="lockerB" onclick="MoveToken('30')">
+            Locker for B
+            <span id="30"></span>
+        </div>
+
+    </div>
+    <div id="alert-wrapper" class="alert-wrapper">
+        <span id="alert-msg" class="msg"></span>
+        <button onclick="closeAlert()">X</button>
+    </div>
+    <div id="game-over" class="game-over">
+        <span class="emoji">🎉</span>
+        <span class="title">Winner Winner </span>
+        <span id="go-res" class="res"></span>
+        <span class="credits">
+            Online LUDO by Rohit.
+        </span>
+        <span class="info-text">
+            Reload the page to start a new game. Feel free to inform me about bugs.
+        </span>
+    </div>
+    <div class="kill-greet" id="kill-greet">
+        <span class="kill-msg" id="kill-msg">
+            Player A just killed a token
+        </span>
+    </div>
+   
+</body>
+</html>
